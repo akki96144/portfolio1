@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フォーム動作確認</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="confirmAlert.js"></script>
+</head>
+<body>
+    <h2>フォーム動作確認</h2>
+    <form id="textForm" action="" method="post">
+        <label for="name">名前</label>
+        <input type="text" id="name" name="name" value="test" required><br><br>
+
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" value="test@example.com" required><br><br>
+
+        <label for="message">メッセージ</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required>test</textarea><br><br>
+
+        <label>性別</label><br>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">男性</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">女性</label>
+		<input type="radio" id="noans" name="gender" value="noans">
+        <label for="noans">無回答</label><br><br>
+
+        <label for="subscribe">ニュースレターを購読する</label>
+        <input type="checkbox" id="subscribe" name="subscribe" checked><br><br>
+
+        <label for="country">国を選択</label>
+        <select id="country" name="country">
+            <option value="japan" selected>日本</option>
+            <option value="usa">アメリカ</option>
+            <option value="uk">イギリス</option>
+        </select><br><br>
+
+        <input type="submit" value="送信">
+    </form>
+
+    <script>
+        new FormConfirmation("textForm");
+    </script>
+</body>
+</html>
